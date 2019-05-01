@@ -36,6 +36,9 @@ cc.Class({
         this.solarPlace.children[pre].active = false;
         this.solarPlace.children[now].active = true;
     },
+    choose(){
+        cc.director.loadScene(this.solarName.children[this.pos].name);
+    },
     addEventHandler() {
         this.bg.on('touchstart',(event)=>{
             this.startPoint = event.getLocation();
@@ -49,11 +52,11 @@ cc.Class({
             console.log(len);
             var pre = this.pos;
             if(len > MINLEN){
-                this.pos = (this.pos+1)%SOLARNUM;
+                this.pos = (this.pos-1+SOLARNUM)%SOLARNUM;
                 this.change(pre,this.pos);
             }
             if(len < -MINLEN){
-                this.pos = (this.pos-1+SOLARNUM)%SOLARNUM;
+                this.pos = (this.pos+1+SOLARNUM)%SOLARNUM;
                 this.change(pre,this.pos);
             }
             console.log(this.pos);

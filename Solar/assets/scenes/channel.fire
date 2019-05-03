@@ -41,8 +41,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.21174230529490867,
-      "y": 0.21174230529490867,
+      "x": 0.16498210430145263,
+      "y": 0.16498210430145263,
       "z": 1
     },
     "_quat": {
@@ -1401,9 +1401,9 @@
     "target": {
       "__id__": 2
     },
-    "component": "",
+    "component": "channel",
     "handler": "choose",
-    "customEventData": ""
+    "customEventData": "0"
   },
   {
     "__type__": "cc.Node",
@@ -1557,7 +1557,7 @@
     "target": {
       "__id__": 2
     },
-    "component": "",
+    "component": "channel",
     "handler": "choose",
     "customEventData": ""
   },
@@ -1713,7 +1713,7 @@
     "target": {
       "__id__": 2
     },
-    "component": "",
+    "component": "channel",
     "handler": "choose",
     "customEventData": ""
   },
@@ -1869,7 +1869,7 @@
     "target": {
       "__id__": 2
     },
-    "component": "",
+    "component": "channel",
     "handler": "choose",
     "customEventData": ""
   },

@@ -18,11 +18,14 @@ cc.Class({
         game:true,
     },
 
+
     back(){
         cc.director.loadScene("game");
     },
 
     start () {
+        var animationComponent = this.bg.getComponent(cc.Animation);
+        animationComponent.play('chunfen_hint'); 
         this.bg.on('touchend',(event)=>{
             this.action();
         })

@@ -1,0 +1,56 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "chunfen_hint",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.8333333333333334,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "New Label": {
+        "props": {
+          "opacity": [
+            {
+              "frame": 0,
+              "value": 255
+            },
+            {
+              "frame": 0.6833333333333333,
+              "value": 200
+            },
+            {
+              "frame": 0.8333333333333334,
+              "value": 0
+            }
+          ],
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                -21,
+                246
+              ]
+            },
+            {
+              "frame": 0.7666666666666667,
+              "value": [
+                -21,
+                315
+              ]
+            },
+            {
+              "frame": 0.8333333333333334,
+              "value": [
+                -21,
+                726
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": []
+}

@@ -56,7 +56,7 @@ cc.Class({
             if(len > MINLEN){
                 this.pos = (this.pos-1+SOLARNUM)%SOLARNUM;
                 this.change(pre,this.pos);
-                 animationComponent.play('planet_right'); //播放向右滑动的动画
+                animationComponent.play('planet_right'); //播放向右滑动的动画
             }
             if(len < -MINLEN){
                 this.pos = (this.pos+1+SOLARNUM)%SOLARNUM;

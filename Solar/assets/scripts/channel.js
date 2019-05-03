@@ -40,6 +40,8 @@ cc.Class({
         cc.director.loadScene(this.solarName.children[this.pos].name);
     },
     addEventHandler() {
+
+        var animationComponent = this.bg.getComponent(cc.Animation)
         this.bg.on('touchstart',(event)=>{
             this.startPoint = event.getLocation();
             console.log(this.startPoint);
@@ -54,10 +56,12 @@ cc.Class({
             if(len > MINLEN){
                 this.pos = (this.pos-1+SOLARNUM)%SOLARNUM;
                 this.change(pre,this.pos);
+                 animationComponent.play('planet_right'); //播放向右滑动的动画
             }
             if(len < -MINLEN){
                 this.pos = (this.pos+1+SOLARNUM)%SOLARNUM;
                 this.change(pre,this.pos);
+                animationComponent.play('planet_left'); //播放向左滑动的动画
             }
             console.log(this.pos);
 

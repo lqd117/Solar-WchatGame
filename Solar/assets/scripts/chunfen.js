@@ -1,5 +1,5 @@
-const ROT_ONE_DOWN = 30;
-const ONE_DOWN = 50;
+const ROT_ONE_DOWN = 10;
+const ONE_DOWN = 30;
 const TIME = 5;
 cc.Class({
     extends: cc.Component,
@@ -32,14 +32,24 @@ cc.Class({
         if(this.game == false){return ;}
         console.log('action');
         console.log(this.huadongkuai.y);
-        console.log(this.jidan.rotation);
-        this.hongsheng1.y += ONE_DOWN;
-        this.huadongkuai.y += ONE_DOWN;
-        this.hongsheng2.y += ONE_DOWN;
-        this.hongsheng3.y -= ONE_DOWN;
-        this.jidan.rotation -= ROT_ONE_DOWN;
-        this.daoying.rotation += ROT_ONE_DOWN;
-        
+        console.log("鸡蛋旋转："+this.jidan.rotation);
+
+        if(this.jidan.rotation >0){
+        	this.jidan.rotation -= ROT_ONE_DOWN;
+        	this.daoying.rotation += ROT_ONE_DOWN;
+        	this.hongsheng1.y -= ONE_DOWN;
+	        this.huadongkuai.y -= ONE_DOWN;
+	        this.hongsheng2.y -= ONE_DOWN;
+	        this.hongsheng3.y += ONE_DOWN;
+        }else{
+        	this.jidan.rotation += ROT_ONE_DOWN;
+        	this.daoying.rotation -= ROT_ONE_DOWN;
+        	this.hongsheng1.y += ONE_DOWN;
+	        this.huadongkuai.y += ONE_DOWN;
+	        this.hongsheng2.y += ONE_DOWN;
+	        this.hongsheng3.y -= ONE_DOWN;
+        }
+
     },
     gameover(){
         this.hongsheng1.destroy();
@@ -54,14 +64,29 @@ cc.Class({
     },
     update (dt) {
         if(this.game == false){return ;}
-        var jidan_speed = 100;
-        var shengzi_speed = 200;
-        this.jidan.rotation += dt * jidan_speed;
-        this.daoying.rotation -= dt * jidan_speed;
-        this.hongsheng1.y -= dt * shengzi_speed;
-        this.huadongkuai.y -=  dt * shengzi_speed;
-        this.hongsheng2.y -=  dt * shengzi_speed;
-        this.hongsheng3.y +=  dt * shengzi_speed;
+        var jidan_speed = 30;  //干扰项
+        var shengzi_speed = 90;
+        if(this.jidan.rotation >0){
+        	this.jidan.rotation += dt * jidan_speed;
+    		this.daoying.rotation -= dt * jidan_speed;
+    		this.hongsheng1.y += dt * shengzi_speed;
+	        this.huadongkuai.y +=  dt * shengzi_speed;
+	        this.hongsheng2.y +=  dt * shengzi_speed;
+	        this.hongsheng3.y -=  dt * shengzi_speed;
+    		
+        }else{
+        	this.jidan.rotation -= dt * jidan_speed;
+    		this.daoying.rotation += dt * jidan_speed;
+    		this.hongsheng1.y -= dt * shengzi_speed;
+	        this.huadongkuai.y -=  dt * shengzi_speed;
+	        this.hongsheng2.y -=  dt * shengzi_speed;
+	        this.hongsheng3.y +=  dt * shengzi_speed;
+        }
+    	
+        // this.hongsheng1.y -= dt * shengzi_speed;
+        // this.huadongkuai.y -=  dt * shengzi_speed;
+        // this.hongsheng2.y -=  dt * shengzi_speed;
+        // this.hongsheng3.y +=  dt * shengzi_speed;
         if(Math.abs(this.huadongkuai.y)<200){
             this.time -=dt;
         }else{

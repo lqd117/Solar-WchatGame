@@ -1,0 +1,161 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "planet_left",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.3333333333333333,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "sphere2_left1": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                -256,
+                -125
+              ]
+            },
+            {
+              "frame": 0.3333333333333333,
+              "value": [
+                -462,
+                -27
+              ]
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0,
+              "value": 50
+            },
+            {
+              "frame": 0.3333333333333333,
+              "value": 0
+            }
+          ]
+        }
+      },
+      "sphere2": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                0,
+                -172
+              ]
+            },
+            {
+              "frame": 0.3333333333333333,
+              "value": [
+                -253.4,
+                -122.8
+              ]
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0,
+              "value": 255
+            },
+            {
+              "frame": 0.3333333333333333,
+              "value": 50
+            }
+          ],
+          "scale": [
+            {
+              "frame": 0,
+              "value": {
+                "__type__": "cc.Vec2",
+                "x": 1,
+                "y": 1
+              }
+            },
+            {
+              "frame": 0.3333333333333333,
+              "value": {
+                "__type__": "cc.Vec2",
+                "x": 0.9,
+                "y": 0.9
+              }
+            }
+          ]
+        }
+      },
+      "sphere2_left2": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                255,
+                -132
+              ]
+            },
+            {
+              "frame": 0.3333333333333333,
+              "value": [
+                1,
+                -187
+              ]
+            }
+          ],
+          "scale": [
+            {
+              "frame": 0,
+              "value": {
+                "__type__": "cc.Vec2",
+                "x": 0.9,
+                "y": 0.9
+              }
+            },
+            {
+              "frame": 0.3333333333333333,
+              "value": {
+                "__type__": "cc.Vec2",
+                "x": 1,
+                "y": 1
+              }
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0,
+              "value": 50
+            },
+            {
+              "frame": 0.3333333333333333,
+              "value": 255
+            }
+          ]
+        }
+      },
+      "sphere2_left3": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                483,
+                -29
+              ]
+            },
+            {
+              "frame": 0.3333333333333333,
+              "value": [
+                255,
+                -134
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": []
+}

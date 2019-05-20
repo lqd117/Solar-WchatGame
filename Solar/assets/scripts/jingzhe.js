@@ -28,6 +28,8 @@ cc.Class({
         cc.director.loadScene("game");
     },
     start () {
+        var animationComponent = this.bg.getComponent(cc.Animation);
+        animationComponent.play('jingzhe_hint'); //提示玩法的动画
         console.log(this.bg.width);
         this.init_allPos();
         this.init_long();

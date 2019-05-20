@@ -1,0 +1,56 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "jingzhe_hint",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.6666666666666666,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "New Label": {
+        "props": {
+          "opacity": [
+            {
+              "frame": 0,
+              "value": 255
+            },
+            {
+              "frame": 0.5833333333333334,
+              "value": 200
+            },
+            {
+              "frame": 0.6666666666666666,
+              "value": 0
+            }
+          ],
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                27,
+                221
+              ]
+            },
+            {
+              "frame": 0.5833333333333334,
+              "value": [
+                27,
+                233
+              ]
+            },
+            {
+              "frame": 0.6666666666666666,
+              "value": [
+                27,
+                732
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": []
+}

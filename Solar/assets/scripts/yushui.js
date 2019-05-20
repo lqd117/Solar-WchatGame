@@ -62,7 +62,13 @@ cc.Class({
     },
     start () {
         this.create();
+<<<<<<< HEAD
         this.array =  [[1,1,1,1,1,1],[1,1,1,1,1,1],[1,1,1,1,1,1]];//每行第一个数字表示在第几阶段
+=======
+        var animationComponent = this.bg.getComponent(cc.Animation);
+        animationComponent.play('yushui_hint'); //提示玩法的动画
+        this.array =  [[1,2,2,2,2,2],[1,2,2,2,2,2],[1,2,2,2,2,2]];//每行第一个数字表示在第几阶段
+>>>>>>> b24798a5e2f2aa6b78943fa2c62288dd8555c311
         console.log(this.array);
     },
     onLoad: function () {

@@ -16,7 +16,7 @@ cc.Class({
         cc.director.loadScene("game");
     },
     next(){
-        cc.director.loadScene("yushui");
+        cc.director.loadScene("yushuiPre");
     },
     change(){
         if(this.pos==3){

@@ -22,7 +22,7 @@ cc.Class({
         cc.director.loadScene("game");
     },
     next(){
-        cc.director.loadScene("jingzhe");
+        cc.director.loadScene("jingzhePre");
     },
     create(){
         var newNode = cc.instantiate(this.yudi);
@@ -62,7 +62,7 @@ cc.Class({
     },
     start () {
         this.create();
-        this.array =  [[1,2,2,2,2,2],[1,2,2,2,2,2],[1,2,2,2,2,2]];//每行第一个数字表示在第几阶段
+        this.array =  [[1,1,1,1,1,1],[1,1,1,1,1,1],[1,1,1,1,1,1]];//每行第一个数字表示在第几阶段
         console.log(this.array);
     },
     onLoad: function () {

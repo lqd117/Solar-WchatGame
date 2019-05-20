@@ -23,10 +23,15 @@ cc.Class({
         lichunName:cc.Node,
         lichunPlace:cc.Node,
 
+        bg_music:cc.AudioSource,
+       button_music:cc.AudioSource,
+
     },
 
     
     start () {
+        this.bg_music.loop = true;
+        this.bg_music.play();
         console.log(this.solarName.children);
         this.addEventHandler();
     },
@@ -37,7 +42,8 @@ cc.Class({
         this.solarPlace.children[now].active = true;
     },
     choose(){
-        cc.director.loadScene(this.solarName.children[this.pos].name);
+        this.button_music.play();
+        cc.director.loadScene(this.solarName.children[this.pos].name+'Pre');
     },
     addEventHandler() {
         this.bg.on('touchstart',(event)=>{

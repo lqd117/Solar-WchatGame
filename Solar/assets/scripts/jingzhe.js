@@ -1,4 +1,4 @@
-const NUM = 3;
+const NUM = 2;
 const MINLEN = 200;
 cc.Class({
     extends: cc.Component,
@@ -91,7 +91,7 @@ cc.Class({
         });
     },
     next(){
-        cc.director.loadScene('chunfen');
+        cc.director.loadScene('chunfenPre');
     },
     check(){
         if(this.long_X_id == this.shandian_X_id && this.long_Y_id == this.shandian_Y_id){

@@ -5,15 +5,18 @@ cc.Class({
     properties: {
        bg:cc.Node,
        startGameButton:cc.Node,
-       musicSetButton:cc.Node,
+       chooseSetButton:cc.Node,
+       bg_music:cc.AudioSource,
+       button_music:cc.AudioSource,
        startPoint:null,
        endPoint:null,
     },
 
     start () {
         console.log("111"); 
+        this.bg_music.loop = true;
+        this.bg_music.play();
     },
-    
     addEventHandlerForBg() {
         this.bg.on('touchstart',(event)=>{
             this.startPoint = event.getLocation();
@@ -29,12 +32,15 @@ cc.Class({
     },
 
     startGame() {
-        console.log("startGame");
-        cc.director.loadScene("channel");
+        this.button_music.play();
+        console.log("startGame");   
+        cc.director.loadScene("lichunPre");
     },
 
-    musicSet() {
-        console.log("musicSet");
+    chooseSet() {
+        this.button_music.play();
+        console.log("chooseSet");
+        cc.director.loadScene("channel"); 
     }
     
 });

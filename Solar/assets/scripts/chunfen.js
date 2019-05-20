@@ -1,6 +1,6 @@
 const ROT_ONE_DOWN = 30;
 const ONE_DOWN = 50;
-const TIME = 5;
+const TIME = 3;
 cc.Class({
     extends: cc.Component,
 
@@ -14,6 +14,7 @@ cc.Class({
         hongsheng3:cc.Node,
         huadongkuai:cc.Node,
         success:cc.Node,
+        button:cc.Node,
         time:0,
         game:true,
     },
@@ -23,9 +24,6 @@ cc.Class({
     },
 
     start () {
-        this.bg.on('touchend',(event)=>{
-            this.action();
-        })
         this.time = TIME;
     },
     action(){
@@ -37,8 +35,14 @@ cc.Class({
         this.huadongkuai.y += ONE_DOWN;
         this.hongsheng2.y += ONE_DOWN;
         this.hongsheng3.y -= ONE_DOWN;
-        this.jidan.rotation -= ROT_ONE_DOWN;
-        this.daoying.rotation += ROT_ONE_DOWN;
+        if(this.jidan.rotation<0){
+            this.jidan.rotation+=ROT_ONE_DOWN;
+            this.daoying.rotation-=ROT_ONE_DOWN;
+        }else{
+            this.jidan.rotation-=ROT_ONE_DOWN;
+            this.daoying.rotation+=ROT_ONE_DOWN;
+        }
+
         
     },
     gameover(){
@@ -46,6 +50,7 @@ cc.Class({
         this.hongsheng2.destroy();
         this.hongsheng3.destroy();
         this.huadongkuai.destroy();
+        this.button.destroy();
         this.success.active = true;
         this.game = false;
     },
@@ -56,13 +61,23 @@ cc.Class({
         if(this.game == false){return ;}
         var jidan_speed = 100;
         var shengzi_speed = 200;
-        this.jidan.rotation += dt * jidan_speed;
-        this.daoying.rotation -= dt * jidan_speed;
+        console.log(this.jidan.rotation);
+        if(this.jidan.rotation<0){
+            if(this.jidan.rotation-dt*jidan_speed>-90){
+                this.jidan.rotation -= dt * jidan_speed;
+                this.daoying.rotation += dt * jidan_speed;
+            }
+        }else{
+            if(this.jidan.rotation+dt*jidan_speed<90){
+                this.jidan.rotation += dt * jidan_speed;
+                this.daoying.rotation -= dt * jidan_speed;
+            }
+        }
         this.hongsheng1.y -= dt * shengzi_speed;
         this.huadongkuai.y -=  dt * shengzi_speed;
         this.hongsheng2.y -=  dt * shengzi_speed;
         this.hongsheng3.y +=  dt * shengzi_speed;
-        if(Math.abs(this.huadongkuai.y)<200){
+        if(Math.abs(this.jidan.rotation)<30){
             this.time -=dt;
         }else{
             this.time = TIME;

@@ -41,8 +41,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.2514498683330467,
-      "y": 0.2514498683330467,
+      "x": 0.29852294921875,
+      "y": 0.29852294921875,
       "z": 1
     },
     "_quat": {
@@ -593,7 +593,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "dfecff1a-0da0-4db0-8fb9-2d5598fdf057"
+      "__uuid__": "664a19b6-6499-4080-9fe6-fc5d51a77410"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -764,7 +764,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "4dc46b6d-7dc5-4b78-a362-3de5226cb1c0"
+      "__uuid__": "d4178665-66ef-40b3-abb4-d5cd2d64c8e9"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -935,7 +935,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "ace72d1a-bc13-4454-86f3-8dc2cab97e91"
+      "__uuid__": "e9524bee-cbf7-4344-9880-176015bec036"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -1106,7 +1106,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "35035893-34ea-4c60-a756-e0ba07f37be1"
+      "__uuid__": "28e39322-d419-4256-894b-af4ace7d8b11"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -1343,7 +1343,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "4aa35544-c844-4d39-85b3-9a917ac5b2fc"
+      "__uuid__": "88c0069e-17ea-4da2-afea-5a95b7329034"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -1431,7 +1431,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "9ec47fc4-effd-476c-931d-622151f47096"
+      "__uuid__": "b49b0b1b-6b5f-42e1-a21e-997f2fd7b24d"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -1519,7 +1519,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "48cf1871-23f9-427b-b7c5-d26a6f712b46"
+      "__uuid__": "a6d15db5-1b91-4b5f-b79f-66f0686dd87c"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -1718,7 +1718,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "ed9a2d86-6572-4bd8-9ed5-c1250e2979e0"
+      "__uuid__": "bbcb9ddc-b8b7-4f3c-a61b-4fb147dd0457"
     },
     "_type": 0,
     "_sizeMode": 0,
